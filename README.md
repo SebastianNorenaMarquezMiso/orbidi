@@ -25,7 +25,7 @@ git clone https://github.com/SebastianNorenaMarquezMiso/orbidi.git
 cd orbidi
 
 3. Añadir archivo .env.local con las siguientes variables
-
+```
   HUBSPOT_API_KEY=
   HUBSPOT_BASE_URL=https://api.hubapi.com
 
@@ -42,7 +42,7 @@ cd orbidi
   LOGGING_LEVEL=INFO
   HUBSPOT_STATUS_PENDING=pending
   HUBSPOT_STATUS_ADDED=added
-
+```
 4. instalar poetry:
 brew install poetry
 
