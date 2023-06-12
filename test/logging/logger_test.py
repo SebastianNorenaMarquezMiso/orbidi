@@ -1,6 +1,5 @@
-from log.logger import Logger
 from unittest.mock import patch
-
+from log.logger import Logger
 
 @patch('logging.getLogger')
 def test_logger_info(mock_get_logger):

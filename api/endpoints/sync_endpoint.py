@@ -1,10 +1,10 @@
+from fastapi import APIRouter, BackgroundTasks
+from fastapi.responses import JSONResponse
 from database.database import Database
 from database.repositories.contact_repository import ContactRepository
 from clients.clickup_client import ClickUpClient
 from clients.hubspot_client import HubSpotClient
 from api.models.call_request_api import CallRequestApi
-from fastapi import APIRouter, BackgroundTasks
-from fastapi.responses import JSONResponse
 from log.logger import Logger
 
 logger = Logger()

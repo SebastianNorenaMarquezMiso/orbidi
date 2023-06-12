@@ -1,7 +1,8 @@
-from api.models.contact import ContactCreateRequest, ContactProperties
 import pytest
+import requests_mock
 from unittest.mock import MagicMock, patch
 from clients.hubspot_client import HubSpotClient
+from api.models.contact import ContactCreateRequest, ContactProperties
 
 
 @pytest.fixture
@@ -25,16 +26,25 @@ def test_create_contact(mock_post):
 
     assert response == response_data
 
-
-def test_update_status_synced_error(mock_requests):
+def test_update_status_synced_error():
     # Configurar el mock para la respuesta de la API de HubSpot con un error
     contact_id = "123"
-    error_message = "404 Client Error: Not Found for url: https:///crm/v3/objects/contacts/123"
-    mock_requests.patch.return_value.json.return_value = {"error": error_message}
-    mock_requests.patch.return_value.status_code = 400
-    # Crear una instancia del cliente de HubSpot
-    client = HubSpotClient()
-    # Llamar a la función de actualización de estado sincronizado
-    with pytest.raises(Exception) as e:
-        client.update_status_synced(contact_id)
-    assert str(e.value) == error_message
+    error_message = "400 Client Error: None for url: https://api.hubapi.com/crm/v3/objects/contacts/123"
+
+    with requests_mock.Mocker() as mock:
+        # Configurar el mock para la petición PATCH y su respuesta
+        mock.patch(
+            f"https://api.hubapi.com/crm/v3/objects/contacts/{contact_id}",
+            json={"error": error_message},
+            status_code=400
+        )
+
+        # Crear una instancia del cliente de HubSpot
+        client = HubSpotClient()
+
+        # Llamar a la función de actualización de estado sincronizado
+        with pytest.raises(Exception) as e:
+            client.update_status_synced(contact_id)
+
+        # Verificar que se levante una excepción con el mensaje de error esperado
+        assert str(e.value) == error_message

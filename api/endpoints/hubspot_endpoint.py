@@ -1,10 +1,10 @@
+from fastapi import APIRouter, HTTPException
+from fastapi.responses import JSONResponse
 from database.database import Database
 from api.models.contact import ContactCreateRequest
 from database.repositories.contact_repository import ContactRepository
 from clients.hubspot_client import HubSpotClient
 from api.models.call_request_api import CallRequestApi
-from fastapi import APIRouter, HTTPException
-from fastapi.responses import JSONResponse
 from log.logger import Logger
 logger = Logger()
 

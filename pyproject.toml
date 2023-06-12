@@ -21,6 +21,7 @@ requests = "^2.26.0"
 psycopg2-binary = "^2.9.1"
 uvicorn = "^0.22.0"
 email-validator = "*"
+requests-mock = "^1.11.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
