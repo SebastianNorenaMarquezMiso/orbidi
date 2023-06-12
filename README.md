@@ -2,6 +2,10 @@
 # Orbidi Test
 
 Este es un proyecto de ejemplo que demuestra el uso de los principios SOLID, así como el uso de repositories y el patrón Singleton.
+## VIDEO
+https://youtu.be/Hr0aY9wsTNI
+
+## USO DE Gitflow
 
 ## CI
 Se implemento un flujo para CI para la validacion de pruebas unitarias , linter y formato del codigo para pririzar la calidad al momento de realizar el merge a la rama master
