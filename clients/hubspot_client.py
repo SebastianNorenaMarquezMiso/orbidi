@@ -8,10 +8,10 @@ load_dotenv('.env.local')
 
 class HubSpotClient:
     def __init__(self):
-        self.api_key = os.getenv("HUBSPOT_API_KEY")
-        self.base_url = os.getenv("HUBSPOT_BASE_URL")
-        self.status_pending = os.getenv("HUBSPOT_STATUS_PENDING")
-        self.status_added = os.getenv("HUBSPOT_STATUS_ADDED")
+        self.api_key = os.getenv("HUBSPOT_API_KEY", '')
+        self.base_url = os.getenv("HUBSPOT_BASE_URL", 'https://test')
+        self.status_pending = os.getenv("HUBSPOT_STATUS_PENDING", '')
+        self.status_added = os.getenv("HUBSPOT_STATUS_ADDED", '')
 
     def create_contact(self, contact_data):
         endpoint = "/crm/v3/objects/contacts"

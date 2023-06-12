@@ -10,7 +10,7 @@ class ContactProperties(BaseModel):
     lastname: constr(min_length=2, max_length=20)
     phone: constr(min_length=10, max_length=20)
     website: constr(regex=r'^[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,}$')# noqa
-    estado_clickup: str = os.getenv("HUBSPOT_STATUS_PENDING")
+    estado_clickup: str = os.getenv("HUBSPOT_STATUS_PENDING", '')
 
 
 class ContactCreateRequest(BaseModel):
