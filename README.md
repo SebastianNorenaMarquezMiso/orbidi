@@ -26,19 +26,22 @@ cd orbidi
 
 3. Añadir archivo .env.local con las siguientes variables
 ```
+# Configuración de HubSpot
   HUBSPOT_API_KEY=
   HUBSPOT_BASE_URL=https://api.hubapi.com
 
+# Configuración de ClickUp
   CLICKUP_BASE_URL=https://api.clickup.com
   CLICKUP_LIST_ID=
   CLICKUP_API_KEY=
 
+# Configuración de la base de datos
   DB_HOST=
   DB_PORT=5432
   DB_USER=developer
   DB_PASS=
   DB_NAME=
-
+# Otras configuraciones
   LOGGING_LEVEL=INFO
   HUBSPOT_STATUS_PENDING=pending
   HUBSPOT_STATUS_ADDED=added
