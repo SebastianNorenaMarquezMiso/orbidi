@@ -5,7 +5,8 @@ Este es un proyecto de ejemplo que demuestra el uso de los principios SOLID, as√
 ## VIDEO
 https://youtu.be/Hr0aY9wsTNI
 
-## USO DE Gitflow
+## Modelo de ramificaci√≤n
+Gitflow
 
 ## CI
 Se implemento un flujo para CI para la validacion de pruebas unitarias , linter y formato del codigo para pririzar la calidad al momento de realizar el merge a la rama master
