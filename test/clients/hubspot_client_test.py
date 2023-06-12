@@ -29,7 +29,7 @@ def test_create_contact(mock_post):
 def test_update_status_synced_error(mock_requests):
     # Configurar el mock para la respuesta de la API de HubSpot con un error
     contact_id = "123"
-    error_message = "404 Client Error: Not Found for url: https://api.hubapi.com/crm/v3/objects/contacts/123"
+    error_message = "404 Client Error: Not Found for url: https:///crm/v3/objects/contacts/123"
     mock_requests.patch.return_value.json.return_value = {"error": error_message}
     mock_requests.patch.return_value.status_code = 400
     # Crear una instancia del cliente de HubSpot
