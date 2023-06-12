@@ -25,6 +25,7 @@ email-validator = "*"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.4"
+black = "^21.9b0"
 
 
 [tool.poetry.scripts]
