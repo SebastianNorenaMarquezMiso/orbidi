@@ -46,7 +46,7 @@ def test_create_task_error(requests_mock):
         "description": "This is a test task"
     }
     error_message = "Error creating task"
-    requests_mock.post.return_value = MockResponse( error_message, 400)
+    requests_mock.post.return_value = MockResponse(error_message, 400)
 
     # Crear una instancia del cliente de ClickUp
     client = ClickUpClient()
