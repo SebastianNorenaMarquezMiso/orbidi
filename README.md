@@ -24,10 +24,32 @@ git clone https://github.com/SebastianNorenaMarquezMiso/orbidi.git
 2. Accede al directorio del proyecto:
 cd orbidi
 
-3. instalar poetry:
+3. Añadir archivo .env.local con las siguientes variables
+  # Configuración de HubSpot
+  HUBSPOT_API_KEY=
+  HUBSPOT_BASE_URL=https://api.hubapi.com
+
+  # Configuración de ClickUp
+  CLICKUP_BASE_URL=https://api.clickup.com
+  CLICKUP_LIST_ID=
+  CLICKUP_API_KEY=
+
+  # Configuración de la base de datos
+  DB_HOST=
+  DB_PORT=5432
+  DB_USER=developer
+  DB_PASS=
+  DB_NAME=
+
+  # Otras configuraciones
+  LOGGING_LEVEL=INFO
+  HUBSPOT_STATUS_PENDING=pending
+  HUBSPOT_STATUS_ADDED=added
+
+4. instalar poetry:
 brew install poetry
 
-4. Instala las dependencias del proyecto utilizando `poetry`:
+5. Instala las dependencias del proyecto utilizando `poetry`:
 
 poetry install
 
