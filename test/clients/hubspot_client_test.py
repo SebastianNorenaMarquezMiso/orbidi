@@ -1,9 +1,13 @@
+import os
 import pytest
 import requests_mock
 from unittest.mock import MagicMock, patch
 from clients.hubspot_client import HubSpotClient
 from api.models.contact import ContactCreateRequest, ContactProperties
+from dotenv import load_dotenv
 
+load_dotenv('.env.local')
+base_url = os.getenv("HUBSPOT_BASE_URL", 'https://test')
 
 @pytest.fixture
 def mock_requests():
@@ -30,12 +34,12 @@ def test_create_contact(mock_post):
 def test_update_status_synced_error():
     # Configurar el mock para la respuesta de la API de HubSpot con un error
     contact_id = "123"
-    error_message = "400 Client Error: None for url: https://api.hubapi.com/crm/v3/objects/contacts/123"
+    error_message = f"400 Client Error: None for url: {base_url}/crm/v3/objects/contacts/123"
 
     with requests_mock.Mocker() as mock:
         # Configurar el mock para la petición PATCH y su respuesta
         mock.patch(
-            f"https://api.hubapi.com/crm/v3/objects/contacts/{contact_id}",
+            f"{base_url}/crm/v3/objects/contacts/{contact_id}",
             json={"error": error_message},
             status_code=400
         )
