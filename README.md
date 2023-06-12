@@ -5,7 +5,7 @@ Este es un proyecto de ejemplo que demuestra el uso de los principios SOLID, as�
 ## VIDEO
 https://youtu.be/Hr0aY9wsTNI
 
-## Modelo de ramificaciòn
+## Modelo de ramificación
 Gitflow
 
 ## CI
