@@ -7,9 +7,9 @@ load_dotenv('.env.local')
 
 class ClickUpClient:
     def __init__(self):
-        self.api_key = os.getenv("CLICKUP_API_KEY")
-        self.base_url = os.getenv("CLICKUP_BASE_URL")
-        self.list_id = os.getenv("CLICKUP_LIST_ID")
+        self.api_key = os.getenv("CLICKUP_API_KEY",'')
+        self.base_url = os.getenv("CLICKUP_BASE_URL",'')
+        self.list_id = os.getenv("CLICKUP_LIST_ID",'')
 
     def create_task(self, task_data):
         endpoint = f"/api/v2/list/{self.list_id}/task"
