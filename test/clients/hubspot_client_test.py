@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv('.env.local')
 base_url = os.getenv("HUBSPOT_BASE_URL", 'https://test')
 
+
 @pytest.fixture
 def mock_requests():
     return MagicMock()
