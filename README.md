@@ -3,6 +3,14 @@
 
 Este es un proyecto de ejemplo que demuestra el uso de los principios SOLID, así como el uso de repositories y el patrón Singleton.
 
+## CI
+Se implemento un flujo para CI para la validacion de pruebas unitarias , linter y formato del codigo para pririzar la calidad al momento de realizar el merge a la rama master
+
+![Screenshot 2023-06-12 at 1 54 18 AM](https://github.com/SebastianNorenaMarquezMiso/orbidi/assets/78800255/490975a0-4ab9-4df2-b61f-eb78c6c46129)
+
+
+![Screenshot 2023-06-12 at 1 41 46 AM](https://github.com/SebastianNorenaMarquezMiso/orbidi/assets/78800255/a3b9ebaf-a45d-4936-96fd-d30ed61c0ca3)
+
 ## Requisitos
 
 - Python 3.8 o superior
