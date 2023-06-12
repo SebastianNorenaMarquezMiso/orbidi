@@ -75,6 +75,10 @@ jobs:
           pip install poetry
           poetry install --no-interaction --no-ansi
 
+      - name: Install Black
+        run: |
+          poetry run pip install black
+
       - name: Format code with Black
         run: |
           poetry run black .
