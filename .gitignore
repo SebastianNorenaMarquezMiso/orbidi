@@ -1,0 +1,17 @@
+# Archivos y carpetas generados por el entorno de desarrollo
+__pycache__/
+.env.local
+.env.production
+venv/
+*.pyc
+
+# Archivos de registro
+logs/
+
+# Archivos y carpetas específicos del editor de código
+.vscode/
+.idea/
+
+# Archivos y carpetas específicos del sistema operativo
+.DS_Store
+Thumbs.db
