@@ -26,6 +26,7 @@ def test_create_contact(mock_post):
 
     assert response == response_data
 
+
 def test_update_status_synced_error():
     # Configurar el mock para la respuesta de la API de HubSpot con un error
     contact_id = "123"
