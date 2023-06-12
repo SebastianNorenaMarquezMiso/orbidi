@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "e59709aa-fcb8-4393-8b5e-c0a3e8ad7bfc",
+		"name": "Your Collection Name",
+		"description": "Description of your collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17876585",
+		"_collection_link": "https://speeding-satellite-983951.postman.co/workspace/Board-Team-APIs~df6406b7-7466-49cb-a83b-46a12772bd0b/collection/17876585-e59709aa-fcb8-4393-8b5e-c0a3e8ad7bfc?action=share&creator=17876585&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Create Contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstname\": \"John\",\n  \"lastname\": \"Doe\",\n  \"phone\": \"123456789\",\n  \"website\": \"example.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/hubspot/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hubspot",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/hubspot/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"hubspot",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Contacts pending",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer pat-na1-bfa3f0c0-426b-4f0e-b514-89b20832c96a",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"filterGroups\": [\n    {\n      \"filters\": [\n        {\n          \"value\": \"pending\",\n          \"propertyName\": \"estado_clickup\",\n          \"operator\": \"EQ\"\n        }\n      ]\n    }\n  ],\n  \"limit\": 100\n}\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.hubapi.com/crm/v3/objects/contacts/search",
+					"protocol": "https",
+					"host": [
+						"api",
+						"hubapi",
+						"com"
+					],
+					"path": [
+						"crm",
+						"v3",
+						"objects",
+						"contacts",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
